@@ -1,4 +1,4 @@
-/*global ga, gsStorage, gsSession, gsUtils */
+/*global gsStorage, gsSession, gsUtils */
 // eslint-disable-next-line no-unused-vars
 var gsAnalytics = (function() {
   'use strict';
@@ -13,6 +13,11 @@ var gsAnalytics = (function() {
   const METRIC_TOTAL_TAB_COUNT = 'metric2';
   const METRIC_TAB_CHECK_TIME_TAKEN = 'metric3';
   const METRIC_TAB_RECOVER_TIME_TAKEN = 'metric4';
+
+  function ga() {
+    // Disabled.
+    return;
+  }
 
   function initAsPromised() {
     return new Promise(function(resolve) {
@@ -127,22 +132,22 @@ var gsAnalytics = (function() {
   };
 })();
 
-(function(i, s, o, g, r, a, m) {
-  i['GoogleAnalyticsObject'] = r;
-  (i[r] =
-    i[r] ||
-    function() {
-      (i[r].q = i[r].q || []).push(arguments);
-    }),
-    (i[r].l = 1 * new Date());
-  (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-  a.async = 1;
-  a.src = g;
-  m.parentNode.insertBefore(a, m);
-})(
-  window,
-  document,
-  'script',
-  'https://www.google-analytics.com/analytics.js',
-  'ga'
-);
+// (function(i, s, o, g, r, a, m) {
+//   i['GoogleAnalyticsObject'] = r;
+//   (i[r] =
+//     i[r] ||
+//     function() {
+//       (i[r].q = i[r].q || []).push(arguments);
+//     }),
+//     (i[r].l = 1 * new Date());
+//   (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+//   a.async = 1;
+//   a.src = g;
+//   m.parentNode.insertBefore(a, m);
+// })(
+//   window,
+//   document,
+//   'script',
+//   'https://www.google-analytics.com/analytics.js',
+//   'ga'
+// );
